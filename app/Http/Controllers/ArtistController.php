@@ -30,6 +30,7 @@ class ArtistController extends Controller
     {
         //
         return view('artists.create');
+        
     }
 
     /**
@@ -42,6 +43,7 @@ class ArtistController extends Controller
 
         Session::flash('success','Artist added successfully');
         return redirect()->route('artists.index');
+
     }
 
     /**
@@ -53,14 +55,15 @@ class ArtistController extends Controller
         return view('artists.show', compact('artist'));
     }
 
+    
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Artist $artist)
     {
         //
-        return view('artist.edit', compact('artists'));
-    }
+        return view('artists.edit', compact('artist'));
+        }
 
     /**
      * Update the specified resource in storage.
@@ -69,6 +72,8 @@ class ArtistController extends Controller
     {
         //
         $artist->update($request->validated());
+        Session::flash('success', 'Artist updated successfully');
+        return redirect()->route('artists.show', $artist->id);
     }
 
     /**
@@ -98,5 +103,7 @@ class ArtistController extends Controller
         Session::Flash('success', 'Artist restored successfully');
         return redirect() -> route('artists.trashed');
     }
+
 }
+
 
