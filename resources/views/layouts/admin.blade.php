@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-
 T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .user-auth{
+            display: flex;
+            align-items:center;
+            gap: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,9 +35,20 @@ navigation">
                             <!-- <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
-                            </li>
+                            <div class="user-auth">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
+                                </li>
+                                <li class="nav-item logout">
+                                    Welcome {{Auth::user() -> name}}!
+                                </li>
+                                <li>
+                                    <form action="{{route('logout')}}" method="POST">
+                                        @csrf
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
