@@ -20,8 +20,8 @@
             <div>{{ $albums->artist->name }}</div>
              
             <div class="btn-control">
-             <a href="{{ route('albums.edit', $albums -> id ) }}" class="card-link">Edit</a>
-             <a href="{{ route('albums.trash', $albums -> id )}}" class="card-link">Delete</a> 
+            <a href="{{ route('albums.edit', $albums -> id ) }}" class="btn btn-secondary">Edit</a>
+            <a href="{{ route('albums.trash', $albums -> id )}}" class="btn btn-danger">Delete</a> 
             </div>
         </div>
     </div>

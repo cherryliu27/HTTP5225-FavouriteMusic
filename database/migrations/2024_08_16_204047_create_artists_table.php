@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('genre');
             $table->string('active');
             $table->string('origin');
+            $table->string('image');
             $table->softDeletes();
             $table->timestamps();
         });

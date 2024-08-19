@@ -27,43 +27,48 @@ class DatabaseSeeder extends Seeder
             'name' => 'DPR IAN', 
             'genre' => 'R&B',
             'active' => '2012–present',
-            'origin' => 'South Korea'
+            'origin' => 'South Korea',
+            'image' => 'https://images.unsplash.com/photo-1724042164044-63cf2138b1e5?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
 
         $ariana = Artist::factory()->create([
             'name' => 'Ariana Grande',
             'genre' => 'Pop',
             'active' => '2008–present',
-            'origin' => 'America'
-
+            'origin' => 'America',
+            'image' => 'https://images.unsplash.com/photo-1724042353731-050abb820425?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
        
         $keshi = Artist::factory()->create([
             'name' => 'Keshi', 
             'genre' => 'R&B',
             'active' => '2016–present',
-            'origin' => 'America'
+            'origin' => 'America',
+            'image' => 'https://images.unsplash.com/photo-1724042486150-c0c9357d1594?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
        
         $ava = Artist::factory()->create([
             'name' => 'Ava Max',
             'genre' => 'Pop',
             'active' => '2016–present',
-            'origin' => 'America'
+            'origin' => 'America',
+            'image' => 'https://images.unsplash.com/photo-1724041580823-2c02426b62dd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
        
         $the1975 = Artist::factory()->create([
             'name' => 'The 1975',
             'genre' => 'Pop Rock',
             'active' => '2002–present',
-            'origin' => 'England'
+            'origin' => 'England',
+            'image' => 'https://images.unsplash.com/photo-1724042332568-110b91d76496?q=80&w=1538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
        
         $vixx = Artist::factory()->create([
             'name' => 'VIXX',
             'genre' => 'K-pop',
             'active' => '2012–present',
-            'origin' => 'South Korea'
+            'origin' => 'South Korea',
+            'image' => 'https://images.unsplash.com/photo-1724042471571-351b108a09f4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         ]);
 
 
@@ -216,57 +221,5 @@ class DatabaseSeeder extends Seeder
             'title' => 'Chained Up', 
             'release_year' => 2015
         ]);
-        
-        
-        // //Seed Data for Albums
-        // Albums::factory()->create([
-        //     'artist_id' => '1', //'DPR IAN',
-        //     'DPRIAN' => 'SAINT - EP (2024)',
-        //     'DPRIAN' => 'Dear Insanity (2023)',
-        //     'DPRIAN' => 'Moodwings In To Order (2022)',
-        //     'DPRIAN' => 'Moodswings in This Order (2021)'
-        // ]);
-
-        // Albums::factory()->create([
-        //     'artist_id' => '2',//'Ariana Grande',
-        //     'ArianaGrande' => 'Eternal Sunshine (2024)',
-        //     'ArianaGrande' => 'Positions (2020)',
-        //     'ArianaGrande' => 'Thank U, Next (2019)',
-        //     'ArianaGrande' => 'Dangerous Woman (2016)'
-        // ]);
-
-        // Albums::factory()->create([
-        //     'artist_id' =>'3', //'Keshi',
-        //     'Keshi' => 'Gabriel (2022)',
-        //     'Keshi' => 'Bandaids (2020)',
-        //     'Keshi' => 'Skeletons (2019)',
-        //     'Keshi' => 'The Reaper (2018)'
-        // ]);
-
-        // Albums::factory()->create([
-        //     'artist_id' => '4', //'Ava Max',
-        //     'AvaMax' => 'My Oh My (2024)',
-        //     'AvaMax' => 'Whatever - Single (2024)',
-        //     'AvaMax' => 'Diamonds & Dancefloors (2023)',
-        //     'AvaMax' => 'Heaven & Hell (2020)'
-        // ]);
-
-        // Albums::factory()->create([
-        //     'artist_id' => '5', //'The 1975',
-        //     'The1975' => 'Being Funny in a Foreign Language (2022)',
-        //     'The1975' => 'Notes on a Conditional Form (2020)',
-        //     'The1975' => 'A Brief Inquiry into Online Relationships (2018)',
-        //     'The1975' => 'I Like It When You Sleep, for You Are So Beautiful yet So Unaware of It (2016)'
-        // ]);
-
-        // Albums::factory()->create([
-        //     'artist_id' => '6', //'VIXX',
-        //     'VIXX' => 'CONTINUUM (2023)',
-        //     'VIXX' => 'EAU DE VIXX (2018)',
-        //     'VIXX' => 'Kratos - EP (2016)',
-        //     'VIXX' => 'Chained Up (2015)'
-        // ]);
-
-
     }
 }

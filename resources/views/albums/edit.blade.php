@@ -40,7 +40,7 @@
             <input type="text" class="form-control" id="release_year" name="release_year" aria- describedby="release_year" value="{{ $album->release_year }}">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
 @endsection

@@ -1,0 +1,12 @@
+.img-fluid {
+    width: 100%;
+    height: 400px !important;
+}
+
+.btn-control {
+    margin-top: 20px;
+}
+
+.btn-info {
+    margin-top: 10px;
+}
