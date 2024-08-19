@@ -39,6 +39,8 @@ navigation">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
                                 </li>
+                                <a class="nav-link" href="{{ route('albums.index') }}">Albums</a>
+                                </li>
                                 <li class="nav-item logout">
                                     Welcome {{Auth::user() -> name}}!
                                 </li>

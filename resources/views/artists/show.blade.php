@@ -15,16 +15,7 @@
             <span class="badge bg-secondary">{{ $artist -> genre }}</span>
             <p class="card-text">Albums</p>
 
-            <!-- Check if songs are available -->
-            <ul>
-                <!-- Iterate through songs -->
-                <li>Album 1</li>
-                <li>Album 2</li>
-                <!-- End iteration -->
-            </ul>
-            <!-- If no songs are found -->
-            <p>No songs found for this album.</p>
-             <div>
+             <div class="btn-control">
              <a href="{{ route('artists.edit', $artist -> id ) }}" class="card-link">Edit</a>
              <a href="{{ route('artists.trash', $artist -> id )}}" class="card-link">Delete</a> 
              </div>

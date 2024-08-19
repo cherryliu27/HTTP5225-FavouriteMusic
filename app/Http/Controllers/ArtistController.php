@@ -104,6 +104,15 @@ class ArtistController extends Controller
         return redirect() -> route('artists.trashed');
     }
 
+
+    public function albums($id)
+    {
+    $artist = Artist::findOrFail($id);
+    $albums = $artist->albums; // Assuming you have set up the relationship in Artist model
+    return view('artists.albums', compact('artist', 'albums'));
+}
+
+
 }
 
 

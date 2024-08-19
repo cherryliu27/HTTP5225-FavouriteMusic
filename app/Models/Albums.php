@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Artist extends Model
+class Albums extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -14,13 +14,13 @@ class Artist extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name',
-        'genre'
+        'artist_id',
+        'title',
+        'release_year'
     ];
 
-    public function albums()
+    public function artist()
     {
-        return $this->hasMany(Albums::class, 'artist_id');
+        return $this->belongsTo(Artist::class);
     }
-
 }
