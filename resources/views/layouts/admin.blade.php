@@ -11,10 +11,10 @@ T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="a
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
-        .user-auth{
+        .user-auth {
             display: flex;
-            align-items:center;
-            gap: 15px;
+            align-items: center;
+            padding-right: 15px;
         }
     </style>
 </head>
@@ -31,26 +31,37 @@ navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li> -->
-                            <div class="user-auth">
+                        <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
                                 </li>
+                                <li>
                                 <a class="nav-link" href="{{ route('albums.index') }}">Albums</a>
                                 </li>
+                                </ul>
+                                <ul class="navbar-nav ms-auto">
+                                @auth
+                                <div class="user-auth">
                                 <li class="nav-item logout">
                                     Welcome {{Auth::user() -> name}}!
                                 </li>
                                 <li>
-                                    <form action="{{route('logout')}}" method="POST">
+                                    <form action="{{route('logout')}}" method="POST" >
                                         @csrf
-                                        <button type="submit">Logout</button>
+                                        <button class="ms-3" type="submit">Logout</button>
                                     </form>
                                 </li>
-                            </div>
+                                </div>
+                                @else
+                                <div class="user-auth">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                    </li>
+                                </div>
+                                @endauth
                         </ul>
                     </div>
                 </div>

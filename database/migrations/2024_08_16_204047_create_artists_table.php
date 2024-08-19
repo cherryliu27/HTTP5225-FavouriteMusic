@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('genre');
+            $table->string('active');
+            $table->string('origin');
             $table->softDeletes();
             $table->timestamps();
         });

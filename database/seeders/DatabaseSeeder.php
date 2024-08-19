@@ -25,32 +25,45 @@ class DatabaseSeeder extends Seeder
         //Seed Data for Artist
         $dprian = Artist::factory()->create([
             'name' => 'DPR IAN', 
-            'genre' => 'R&B'
+            'genre' => 'R&B',
+            'active' => '2012–present',
+            'origin' => 'South Korea'
         ]);
 
         $ariana = Artist::factory()->create([
             'name' => 'Ariana Grande',
-            'genre' => 'Pop'
+            'genre' => 'Pop',
+            'active' => '2008–present',
+            'origin' => 'America'
+
         ]);
        
         $keshi = Artist::factory()->create([
             'name' => 'Keshi', 
-            'genre' => 'R&B'
+            'genre' => 'R&B',
+            'active' => '2016–present',
+            'origin' => 'America'
         ]);
        
         $ava = Artist::factory()->create([
             'name' => 'Ava Max',
-            'genre' => 'Pop'
+            'genre' => 'Pop',
+            'active' => '2016–present',
+            'origin' => 'America'
         ]);
        
         $the1975 = Artist::factory()->create([
             'name' => 'The 1975',
-            'genre' => 'Pop Rock'
+            'genre' => 'Pop Rock',
+            'active' => '2002–present',
+            'origin' => 'England'
         ]);
        
         $vixx = Artist::factory()->create([
             'name' => 'VIXX',
-            'genre' => 'K-pop'
+            'genre' => 'K-pop',
+            'active' => '2012–present',
+            'origin' => 'South Korea'
         ]);
 
 

@@ -16,10 +16,11 @@
         <div class="card-body">
             <h5 class="card-title">{{ $artist -> name }}</h5>
             <span class="badge bg-secondary">{{ $artist -> genre }}</span>
+            <div>Active Since: {{ $artist -> active }}</div>
+            <div>Origin: {{ $artist -> origin }}</div>
             <div>
             <a href="{{ route('artists.albums', $artist->id) }}" class="btn btn-primary">Albums</a>
             </div>
-             
             <div class="btn-control">
              <a href="{{ route('artists.edit', $artist -> id ) }}" class="card-link">Edit</a>
              <a href="{{ route('artists.trash', $artist -> id )}}" class="card-link">Delete</a> 
