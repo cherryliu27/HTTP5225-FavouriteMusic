@@ -1,66 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Music Dashboard Web Application
 
-## About Laravel
+## 1. Intro to Your Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Our web application displays and manages our favorite music, featuring a dashboard that showcases our top artists and their albums. We have integrated CRUD functionalities for both artists and albums. Since we both love music, we decided to create a web app where we can share our favorite music and combine our favorites into one dashboard, allowing us to manage our music preferences. The artists included for Maria are DPR Ian, Ava Max, and VIXX, while Cherry's favorites are Keshi, Ariana Grande, and The 1975.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 2. Explain the Features and Database Schema
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Both artists and albums have CRUD operations. The artist table contains the fields `id`, `name`, `genre`, `active`, and `origin`. The album table includes `id`, `artist_id` (a foreign key linking to the id of the Artist table), `title`, and `release_year`. Each artist can have multiple albums, while each album can belong to one artist only (one-to-many relationship). When creating a new album, users can assign it to an existing artist from the database.
 
-## Learning Laravel
+Non-authenticated users can view the dashboard, browse all artists and albums, including the albums that belong to each artist. If a user wants to log in or register, they can find the links in the nav bar. However, if a user attempts to perform actions such as editing, adding, or deleting without being logged in, they will be redirected to the login page as these functions require user authentication. Once logged in, the navigation bar will update to display a logout button and a personalized welcome message for the user.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 3. Add 4-10 Screenshots to Demo the User Flow
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. View all artists (public view)
+<img src="https://i.imgur.com/XieNOzx.png" alt="View all artists" width="500">
+2. View all albums by a specific artist (public view)
+<img src="https://i.imgur.com/hai92lC.png" alt="View all artists" width="500">
+3. View all albums (public view)
+<img src="https://i.imgur.com/4nV7FL9.png" alt="View all artists" width="500">
+4. Access Edit Artist (Admin -> redirected to login)
+<img src="https://i.imgur.com/fyXfZLy.png" alt="View all artists" width="500">
+5. Edit Artist -> Eg. Active Since
+<img src="https://i.imgur.com/6LvOtQf.png" alt="View all artists" width="500">
+6. Redirect to edited artist’s page
+<img src="https://i.imgur.com/ECb2SBC.png" alt="View all artists" width="500">
+7. Logout (Back to public view)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## 5. If you were unable to complete the assignment, explain what you wanted to do and why you couldn't complete it - 1-2 paragraphs
+Before implementing middleware for specific route protection, all routes, including artists.create, were accessible to public view without any issues. When applying middleware to the entire Artist or Albums routes, it worked fine. However, after introducing middleware to restrict access based on user authentication for specific routes (such as dividing routes into public and authenticated user access), the artists.create route began returning a 404 Not Found error, while other routes like artists.edit and artists.trash continued to function correctly. (Refer to the image below as the working site before adding specific routing protection.)
+<img src="https://i.imgur.com/vxx571S.png" alt="View all artists" width="500">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The create route was properly defined within the middleware group, along with the edit and trash functionalities, all using the same code. However, create is the only route returning a 404 error. To troubleshoot, I confirmed that the create method in ArtistController correctly returns the artists.create view and that the create.blade.php file was properly placed in the resources/views/artists directory. Despite these checks, the route still resulted in a 404 error. Further investigation into route definitions and middleware application is needed to resolve the issue.
 
-### Premium Partners
+## 5. Your Thoughts on Laravel and Future Learnings
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Laravel is a convenient framework for this project, especially with its ability to automatically generate routes and templates, which is particularly useful for CRUD operations. The introduction of data seeding and the use of Faker for generating random names, emails, and other data were also useful, allowing us to quickly populate our database with realistic data and saving a lot of time. In the future, it would be interesting to see how Laravel can be integrated with other front-end frameworks to further enhance the front-end user experience.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
