@@ -28,6 +28,18 @@
             <label for="genre" class="form-label">Genre</label>
             <input type="text" class="form-control" id="genre" name="genre" value="{{ $artist->genre }}">
         </div>
+        <div class="mb-3">
+            <label for="active" class="form-label">Genre</label>
+            <input type="text" class="form-control" id="active" name="active" value="{{ $artist->active }}">
+        </div>
+        <div class="mb-3">
+            <label for="origin" class="form-label">Genre</label>
+            <input type="text" class="form-control" id="origin" name="origin" value="{{ $artist->origin }}">
+        </div>
+        <div class="mb-3">
+            <label for="origin" class="form-label">Image Link (*<a href="https://unsplash.com/">Unsplash</a> Images only)</label>
+            <input type="text" class="form-control" id="origin" name="origin" value="{{ $artist->image }}">
+        </div>
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
