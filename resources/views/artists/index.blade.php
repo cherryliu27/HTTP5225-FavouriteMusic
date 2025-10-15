@@ -10,8 +10,7 @@
     
     <div class="col-md-3 mt-2 mb-2">
         <div class="card">
-            <div class="cover">
-            <img src="{{ $artist->image}}" class="img-fluid" alt="Album Name Cover"> 
+            <div class="cover img-fluid" style="background-image: url({{ $artist->image}})">
         </div>
         <div class="card-body">
             <h5 class="card-title">{{ $artist -> name }}</h5>
