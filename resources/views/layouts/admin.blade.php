@@ -10,7 +10,7 @@
 T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
         .user-auth {
             display: flex;
@@ -21,54 +21,48 @@ T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="a
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Laravel LMS</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs- target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle
-navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
-                                </li>
-                                <li>
-                                <a class="nav-link" href="{{ route('albums.index') }}">Albums</a>
-                                </li>
-                                </ul>
-                                <ul class="navbar-nav ms-auto">
-                                @auth
-                                <div class="user-auth">
-                                <li class="nav-item logout">
-                                    Welcome {{Auth::user() -> name}}!
-                                </li>
-                                <li>
-                                    <form action="{{route('logout')}}" method="POST" >
-                                        @csrf
-                                        <button class="ms-3" type="submit">Logout</button>
-                                    </form>
-                                </li>
-                                </div>
-                                @else
-                                <div class="user-auth">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">Register</a>
-                                    </li>
-                                </div>
-                                @endauth
-                        </ul>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Favourite Music</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs- target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ route('albums.index') }}">Albums</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    @auth
+                    <div class="user-auth">
+                        <li class="nav-item logout">
+                            Welcome {{Auth::user() -> name}}!
+                        </li>
+                        <li>
+                            <form action="{{route('logout')}}" method="POST" >
+                                @csrf
+                                <button class="ms-3" type="submit">Logout</button>
+                            </form>
+                        </li>
                     </div>
-                </div>
-            </nav>
+                     @else
+                    <div class="user-auth">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    </div>
+                    @endauth
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
     <div class="container-fluid mt-5">
         <div class="container">
             @yield('content')

@@ -24,7 +24,10 @@ class StoreArtistRequest extends FormRequest
         return [
             //
             'name' => 'required|string',
-            'genre' => 'required|string'
+            'genre' => 'required|string',
+            'active' => 'nullable|string|max:255',
+            'origin' => 'nullable|string|max:255',
+            'image' => 'nullable|string|max:255'
         ];
     }
 }

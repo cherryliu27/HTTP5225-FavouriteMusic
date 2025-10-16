@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAlbumsRequest;
 use App\Http\Requests\UpdateAlbumsRequest;
 use App\Models\Albums;
+use App\Models\Artist;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -29,7 +30,8 @@ class AlbumsController extends Controller
     public function create()
     {
         //
-        return view('albums.create');
+        $artists = Artist::all();
+        return view('albums.create', compact('artists'));
         
     }
 

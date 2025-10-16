@@ -21,23 +21,23 @@
         {{ csrf_field() }}
         <div class="mb-3">
             <label for="name" class="form-label">Artist Name</label>
-            <input type="text" class="form-control" id="name" name="name" aria- describedby="name">
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
         </div>
         <div class="mb-3">
             <label for="genre" class="form-label">Genre</label>
-            <input type="text" class="form-control" id="genre" name="genre" aria- describedby="genre">
+            <input type="text" class="form-control" id="genre" name="genre" aria-describedby="genre">
         </div>
         <div class="mb-3">
             <label for="active" class="form-label">Active Since:</label>
-            <input type="text" class="form-control" id="active" name="active" aria- describedby="active">
+            <input type="text" class="form-control" id="active" name="active" aria-describedby="active">
         </div>
         <div class="mb-3">
             <label for="origin" class="form-label">Origin</label>
-            <input type="text" class="form-control" id="origin" name="origin" aria- describedby="origin">
+            <input type="text" class="form-control" id="origin" name="origin" aria-describedby="origin">
         </div>
         <div class="mb-3">
-        <label for="origin" class="form-label">Image Link (*<a href="https://unsplash.com/">Unsplash</a> Images only)</label>
-            <input type="text" class="form-control" id="origin" name="origin" aria- describedby="origin">
+        <label for="image" class="form-label">Image Link (<b>Unsplash</b> or <b>Dropbox Images</b> recommended)</label>
+            <input type="text" class="form-control" id="image" name="image" aria-describedby="image">
         </div>
         <button type="submit" class="btn btn-success">Submit</button>
     </form>

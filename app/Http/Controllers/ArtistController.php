@@ -38,8 +38,14 @@ class ArtistController extends Controller
      */
     public function store(StoreArtistRequest $request)
     {
-        //
-        Artist::create($request->validated());
+        $data = $request->validated();
+
+        // Reemplazar automáticamente el final de los links de Dropbox
+        if (isset($data['image'])) {
+            $data['image'] = str_replace(['?dl=0', '?dl=1'], '?raw=1', $data['image']);
+        }
+
+        Artist::create($data);
 
         Session::flash('success','Artist added successfully');
         return redirect()->route('artists.index');
@@ -70,8 +76,14 @@ class ArtistController extends Controller
      */
     public function update(UpdateArtistRequest $request, Artist $artist)
     {
-        //
-        $artist->update($request->validated());
+        $data = $request->validated();
+
+        // Reemplaza también al actualizar
+        if (isset($data['image'])) {
+            $data['image'] = str_replace(['?dl=0', '?dl=1'], '?raw=1', $data['image']);
+        }
+
+        $artist->update($data);
         Session::flash('success', 'Artist updated successfully');
         return redirect()->route('artists.show', $artist->id);
     }

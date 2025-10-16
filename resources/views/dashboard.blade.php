@@ -12,6 +12,9 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+                    <a href="{{ route('artists.index') }}" class="btn btn-primary">
+            Go to Artists
+        </a>
         </div>
     </div>
 </x-app-layout>

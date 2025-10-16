@@ -1,7 +1,8 @@
 .img-fluid {
-    height: 100%;
+    height: 500px;
     background-position: center;
     background-size: cover;
+    border-radius: 9px 9px 0 0;
 }
 
 .btn-control {
@@ -10,4 +11,37 @@
 
 .btn-info {
     margin-top: 10px;
+}
+
+.btn-primary {
+    display: block;
+    width: 150px;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    margin-top: 2%;
+    text-align: center;
+}
+
+body {
+    background-color: var(--bs-dark);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.display-2, label {
+    color: var(--bs-white);
+}
+
+.mt-5 {
+    margin-top: 6rem !important;
+}
+
+.col-md-3:last-child {
+    margin-bottom: 6rem !important;
 }

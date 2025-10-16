@@ -22,13 +22,10 @@
         <div class="mb-3">
             <label for="artist_id" class="form-label">Artist</label>
             <select id="artist_id" name="artist_id">
-                <option value=""></option>
-                <option value="1">DPR IAN</option>
-                <option value="2">Ariana Grande</option>
-                <option value="3">Keshi</option>
-                <option value="4">Ava Max</option>
-                <option value="5">The 1975</option>
-                <option value="6">VIXX</option>
+                <option value="">Select an Artist</option>
+                @foreach($artists as $artist)
+                    <option value="{{ $artist->id }}">{{ $artist->name }}</option>
+                @endforeach
             </select>
         </div>
         <div class="mb-3">

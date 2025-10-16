@@ -26,49 +26,49 @@ class DatabaseSeeder extends Seeder
         $dprian = Artist::factory()->create([
             'name' => 'DPR IAN', 
             'genre' => 'R&B',
-            'active' => '2012–present',
+            'active' => '2012-present',
             'origin' => 'South Korea',
-            'image' => 'https://images.unsplash.com/photo-1724042164044-63cf2138b1e5?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/7ah96wkud733ic7xxaolt/DPR_Ian_1.webp?rlkey=xp0evm3579b2a56f0yije2slc&st=jsuxxm23&raw=1'
         ]);
 
         $ariana = Artist::factory()->create([
             'name' => 'Ariana Grande',
             'genre' => 'Pop',
-            'active' => '2008–present',
+            'active' => '2008-present',
             'origin' => 'America',
-            'image' => 'https://images.unsplash.com/photo-1724042353731-050abb820425?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/rjc9aazznhqquyrypkqwd/Ariana-Grande-Album-React-Podcast.jpg?rlkey=bwtchxdga435wi7vwacpq88vh&st=wp0bc581&raw=1'
         ]);
        
         $keshi = Artist::factory()->create([
             'name' => 'Keshi', 
             'genre' => 'R&B',
-            'active' => '2016–present',
+            'active' => '2016-present',
             'origin' => 'America',
-            'image' => 'https://images.unsplash.com/photo-1724042486150-c0c9357d1594?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/i0v21u706srgbrjms3x8k/Keshi-1.jpg?rlkey=yevy688t3m3yvt2w1334pwkpw&st=oib5tqwm&raw=1'
         ]);
        
         $ava = Artist::factory()->create([
             'name' => 'Ava Max',
             'genre' => 'Pop',
-            'active' => '2016–present',
+            'active' => '2016-present',
             'origin' => 'America',
-            'image' => 'https://images.unsplash.com/photo-1724041580823-2c02426b62dd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/rkajzwiu8lvujts0dbee2/content_Ava-Max-Press-Photo-1-Credit-Lauren-Dunn.jpg_CROPPED.jpg?rlkey=jzrcpogf4kvqt1vfps90vxua5&st=l9fik9qf&raw=1'
         ]);
        
         $the1975 = Artist::factory()->create([
             'name' => 'The 1975',
             'genre' => 'Pop Rock',
-            'active' => '2002–present',
+            'active' => '2002-present',
             'origin' => 'England',
-            'image' => 'https://images.unsplash.com/photo-1724042332568-110b91d76496?q=80&w=1538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/qya6qw1uepxogut52ezxt/The-1975.jpg.webp?rlkey=6a6rv80breom77a5d4kubez61&st=2w96wqpv&raw=1'
         ]);
        
         $vixx = Artist::factory()->create([
             'name' => 'VIXX',
             'genre' => 'K-pop',
-            'active' => '2012–present',
+            'active' => '2012-present',
             'origin' => 'South Korea',
-            'image' => 'https://images.unsplash.com/photo-1724042471571-351b108a09f4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'image' => 'https://www.dropbox.com/scl/fi/2x2ralwynchm58faao4jg/vixx-the-5th-mini-album-continuum-concept-photo-group-v0-bagn7r2mmxzb1.jpg.webp?rlkey=xes9ty2vjvoq7csype4poy3eq&st=zbbgovci&raw=1'
         ]);
 
 
